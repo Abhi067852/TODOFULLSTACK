@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="box" id="heading"><%= status %></div>
+    <!-- 
+    <%  if(status==="Wednesday "){%>
+    <h1 style="color: rgb(164, 197, 197);">
+        It's a <%= status %>! Bro;
+
+
+    </h1>
+    <% } else { %>
+    <h1 style="color: rgb(13, 255, 255);">
+        It's a <%=status%>! Bro;
+
+    </h1>
+    <% } %> -->
+    <div class="box">
+
+        <% for(let i=0;i<newlist.length;  i++){%>
+        <div class="item">
+
+            <input type="checkbox">
+            <p>
+
+                <%=newlist[i].name%>
+            </p>
+        </div>
+
+        <% }%>
+
+
+
+        <form class="item" action="/" method="post">
+
+
+            <input class="inp" type="text" name="Task" placeholder="Enter New Task" autocomplete="off">
+            <button type="submit" name="list" value=<%=status%>>+</button>
+        </form>
+        <form class="item" action="/" method="post">
+            <input class="inp" type="number" name="index" placeholder="Delete Element" autocomplete="off">
+            <button type="submit" name="delTask" value="del">-</button>
+            <form>
+
+
+
+
+</body>
+
+</html>
