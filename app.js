@@ -9,7 +9,7 @@ const app = express();
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
-const url = "mongodb+srv://Abhishek:Sanj@1974@gettingstarted.bsmia.mongodb.net/TodoList?retryWrites=true&w=majority"
+const url = "mongodb+srv://Abhishek:<password>@gettingstarted.bsmia.mongodb.net/TodoList?retryWrites=true&w=majority"
 mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: true });
 const itemsSchema = {
     name: String
